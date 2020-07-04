@@ -1,0 +1,73 @@
+Os passos abaixo ajudarão com a criação de um ambiente virtual e usaremos o Bash para a execução dos comandos. Caso queira usar o CMD, por gentileza consulte o PDF do professor ou acesse o google.com.
+
+Observação: Abaixo estamos partindo do princípio que já temos instalados em nossas máquinas o Bash, Python, Pip e o Virtualenv.
+Aplicar os comandos abaixo para garantir:
+--> python --version
+--> pip --version
+--> virtualenv --version
+/****************************************************/
+
+P1 -->    Criar uma pasta com o nome do projeto.
+P2 -->    Dentro da pasta criada, abrir o Bash.
+P3 -->    No Bash aplicar o comando --> virtualenv venv
+
+OBS: virtualenv é o comando que cria ambientes virtuais e, venv é o nome do ambiente virtual.
+/****************************************************/
+
+P4 -->    Dá um ls para listar as pastas e os arquivos do diretório atual, para sabermos se o ambiente virtual(venv) foi realmente criado.
+P5 -->    No Bash aplicar o comando -->  source venv/Scripts/activate
+
+OBS: Esse comando serve para ativarmos o nosso ambiente virtual.
+/****************************************************/
+
+P6 -->    No Bash aplicar o comando --> pip install flask
+
+OBS: Sempre que criamos um ambiente virtual novo é necessário instalar o flask, pois como o nosso projeto será em flask precisaremos desse Framework instalado.
+
+Flask é um pequeno framework web escrito em Python e baseado na biblioteca WSGI Werkzeug e na biblioteca de Jinja2.
+Flask tem a flexibilidade da linguagem de programação Python e provê um modelo simples para desenvolvimento web.
+
+Framework: Conjunto de ferramentas e técnicas para desenvolver algo de maneira rápida e fácil.
+
+Micro: O Flask depende de bem poucas bibliotecas do Python para funcionar.
+/****************************************************/
+
+P7 -->    Apenas para garantir que o flask foi instalado, podemos aplicar o comandos abaixo:
+--> flask --version
+/****************************************************/
+
+P8 -->    No Bash aplicar o comando --> pip freeze > requirements.txt
+OBS: Esse comando significa que vamos pegar a saída do pip freeze e guardarmos em um arquivo de texto chamado requirements.txt. Dentro do requirements.txt teremos todas as dependências do projeto e com isso podemos levar esse ambiente virtual para outras máquinas.
+Detalhe: Não adianta querer levar a pasta do projeto, pois, não vai rolar e por isso reforço a necessidade de salvar as configurações no requirements.txt.
+
+OBS: Se quisermos instalar em outro ambiente o comando é: pip install -r requirements.txt
+/****************************************************/
+
+P9 -->    No Bash aplicar o comando --> touch aplicacao.py
+OBS: Cria um arquivo chamado aplicacao.py
+Esse arquivo será usado para importarmos o flask.
+/****************************************************/
+
+P10 -->   Depois de criarmos e configurarmos os arquivos aplicacao.py e controllers.py, daremos o comando abaixo.
+OBS: No Bash aplicar o comando --> python controllers.py
+
+/****************************************************/
+P11 -->   
+P12 -->   
+P13 -->   
+P14 -->   
+P15 -->   
+P15 -->   
+P16 -->   
+P17 -->   
+P18 -->   
+P19 -->   
+P20 -->   
+
+Desativar ambiente virtual --> deactivate
+
+Depois de todos os arquivos acima instalados se quisermos traballhar com BD é necessários instalarmos o sqlalchemy e para isso usamos o comando:
+pip install flask-sqlalchemy
+
+depois se quisermos acompanhar as migrações(mudanças no BD) instalaremos o flask migrate
+pip install flask-migrate
